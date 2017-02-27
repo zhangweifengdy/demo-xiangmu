@@ -1,0 +1,565 @@
+@charset "UTF-8";
+/*全局*/
+/*html,body*/
+/*定位*/
+/*公共头部*/
+/*关注按钮*/
+/*内部盒子*/
+/*中间盒子定位*/
+/*图片轮播下标*/
+/*三角*/
+/*普通的底部*/
+/*底部*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  font-family: "Microsoft YaHei"; }
+
+html, body, .index_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+li {
+  list-style: none; }
+
+@keyframes play {
+  0% {
+    -webkit-transform: translate3d(0, -60px, 0);
+    opacity: 0; }
+  100% {
+    -webkit-tranform: translate3d(0, 0, 0);
+    opacity: 1; } }
+/*-----------------------leader-----------------------*/
+.loading {
+  width: 100%;
+  height: 100%;
+  background: url(../images/leader.jpg) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 60px;
+  z-index: 20;
+  background: #eeeeee;
+  text-align: center;
+  padding-top: 30px; }
+  .loading .loading_animation {
+    display: inline-block;
+    animation: play 1s; }
+
+/*-----------------------index_header------------------*/
+.index_header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  position: relative;
+  display: -webkit-flex;
+  padding-top: 10px; }
+  .index_header .recommend {
+    width: 48px;
+    height: 35px;
+    position: relative;
+    margin: 0 8px; }
+    .index_header .recommend i {
+      width: 48px;
+      height: 35px;
+      display: block;
+      background: url(../images/tuijian_03.jpg) no-repeat;
+      background-size: contain;
+      -webkit-transition: transform .3s; }
+    .index_header .recommend strong {
+      position: absolute;
+      left: 50%;
+      top: 9px;
+      margin-left: -15px;
+      color: #c54b3c;
+      font-weight: bold; }
+  .index_header .recommend_on i {
+    -webkit-transform: rotate(160deg) translate3d(10px, 0, 0);
+    -webkit-transition: transform .5s; }
+  .index_header .index_search {
+    width: 100%;
+    height: 35px;
+    -webkit-flex-grow: 1;
+    background: #f2f2f2;
+    border-radius: 5px;
+    font-size: 15px;
+    text-align: center;
+    line-height: 35px;
+    color: #aaaaaa; }
+    .index_header .index_search i {
+      padding-right: 5px; }
+  .index_header .add {
+    width: 45px;
+    height: 39px;
+    margin: 0 10px;
+    text-align: center;
+    line-height: 39px;
+    color: #c54b3c;
+    font-weight: bold;
+    font-size: 50px; }
+
+/*---------------------index_main--------------------------*/
+.index_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #eeebeb;
+  padding: 60px 0 60px 0;
+  overflow: auto;
+  /*-------------------------index_banner-------------*/
+  /*------------------------index_nav-------------------*/
+  /*------------------index_hotlist----------------*/
+  /*-------------------index_material-------------*/
+  /*---------------index_topic-----------------*/ }
+  .index_main .index_banner {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    position: relative; }
+    .index_main .index_banner ul {
+      width: 400%;
+      height: 170px; }
+      .index_main .index_banner ul li {
+        width: 25%;
+        height: 170px;
+        float: left; }
+        .index_main .index_banner ul li img {
+          width: 100%;
+          height: 100%; }
+    .index_main .index_banner .index {
+      width: 110px;
+      height: 10px;
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      margin-left: -55px; }
+      .index_main .index_banner .index span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #fff;
+        float: left;
+        margin: 0 8px; }
+      .index_main .index_banner .index .index_on {
+        background: #ccc; }
+  .index_main .index_nav {
+    width: 100%;
+    height: 100px;
+    background: #fff; }
+    .index_main .index_nav li {
+      width: 25%;
+      height: 80px;
+      float: left;
+      text-align: center;
+      color: #414141; }
+      .index_main .index_nav li span {
+        display: block;
+        width: 32px;
+        height: 30px;
+        margin: 20px auto 10px auto; }
+        .index_main .index_nav li span img {
+          width: 100%;
+          height: 100%; }
+  .index_main .index_hotlist {
+    width: 100%;
+    height: 870px;
+    background: #fff;
+    margin-top: 10px; }
+    .index_main .index_hotlist .index_hotlist_title {
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      color: #aaaaaa;
+      padding-left: 10px; }
+    .index_main .index_hotlist dl {
+      width: 33.3%;
+      height: 165px;
+      background: #fff;
+      float: left;
+      padding-left: 10px;
+      border-top: 1px #eeebeb solid; }
+      .index_main .index_hotlist dl dt {
+        width: 100%;
+        height: 106px;
+        margin-top: 10px; }
+        .index_main .index_hotlist dl dt img {
+          width: 100%;
+          height: 100%; }
+      .index_main .index_hotlist dl dd {
+        text-align: center;
+        padding-top: 10px;
+        color: #404040; }
+      .index_main .index_hotlist dl:nth-child(3n+1) {
+        padding-right: 10px; }
+  .index_main .index_material {
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+    background: #fff; }
+    .index_main .index_material .index_material_title {
+      background: #fff;
+      height: 40px;
+      border-bottom: 1px #eeebeb solid;
+      line-height: 40px;
+      color: #aaaaaa;
+      padding-left: 10px; }
+    .index_main .index_material dl {
+      width: 25%;
+      height: 110px;
+      border-bottom: 1px #eeebeb solid;
+      float: left; }
+      .index_main .index_material dl dt {
+        width: 62px;
+        height: 62px;
+        margin: 8px auto; }
+        .index_main .index_material dl dt img {
+          width: 100%;
+          height: 100%; }
+      .index_main .index_material dl dd {
+        text-align: center;
+        color: #404040; }
+    .index_main .index_material .all_material {
+      width: 100%;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      color: #c54b3c; }
+  .index_main .index_topic {
+    width: 100%;
+    margin-top: 10px;
+    background: #fff; }
+    .index_main .index_topic .index_topic_title {
+      width: 100%;
+      height: 40px;
+      border-bottom: 1px #eeebeb solid;
+      line-height: 40px;
+      color: #aaaaaa;
+      padding-left: 10px; }
+    .index_main .index_topic .topic_item {
+      width: 100%;
+      padding: 0 10px;
+      padding-bottom: 10px; }
+      .index_main .index_topic .topic_item p {
+        width: 100%;
+        height: 160px;
+        background: url(../images/topic_03.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: 10px; }
+      .index_main .index_topic .topic_item p:nth-child(2) {
+        background: url(../images/topic_06.jpg) no-repeat;
+        background-size: 100% 100%; }
+      .index_main .index_topic .topic_item p:nth-child(3) {
+        background: url(../images/topic1_03.jpg) no-repeat;
+        background-size: 100% 100%; }
+    .index_main .index_topic .all_topic {
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: #c54b3c;
+      border-top: 1px #eeebeb solid; }
+  .index_main .index_bottom {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    color: #ababab; }
+
+/*------------------------------index_footer---------------------*/
+.index_footer {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-top: 1px #ccc solid;
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+  .index_footer li {
+    width: 25%;
+    height: 60px;
+    float: left;
+    text-align: center;
+    color: #adadad; }
+    .index_footer li i {
+      width: 26px;
+      height: 22px;
+      display: block;
+      background: url(../images/home_red_08.jpg) no-repeat;
+      background-size: 100% 100%;
+      margin: 5px auto; }
+  .index_footer li:nth-child(2) i {
+    background: url(../images/shequ_fff_03.jpg) no-repeat;
+    background-size: 100% 100%; }
+  .index_footer li:nth-child(3) i {
+    background: url(../images/haohuo_fff_11.jpg) no-repeat;
+    background-size: 100% 100%; }
+  .index_footer li:nth-child(4) i {
+    background: url(../images/me_fff_05.jpg) no-repeat;
+    background-size: 100% 100%; }
+  .index_footer .on {
+    color: #c54b3c; }
+
+/*-------------------------recommend_container-----------------------------*/
+.recommend_container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  -webkit-transform: translate3d(0, -110%, 0); }
+
+/*----------------------------recommend_header----------------*/
+.recommend_header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  position: relative; }
+  .recommend_header .recommend_two {
+    width: 48px;
+    height: 35px;
+    position: absolute;
+    left: 10px;
+    top: 10px; }
+    .recommend_header .recommend_two i {
+      width: 48px;
+      height: 35px;
+      display: block;
+      background: url(../images/tuijian_03.jpg) no-repeat;
+      background-size: contain;
+      -webkit-transform: rotate(160deg) translate3d(10px, 0, 0); }
+    .recommend_header .recommend_two strong {
+      position: absolute;
+      left: 50%;
+      top: 9px;
+      margin-left: -15px;
+      color: #c54b3c;
+      font-weight: bold; }
+  .recommend_header .recommend_tab {
+    width: 50%;
+    height: 60px;
+    margin: 0 auto; }
+    .recommend_header .recommend_tab .recommend_select {
+      width: 50%;
+      color: #ababab;
+      float: left;
+      padding: 11px; }
+    .recommend_header .recommend_tab .recommend_select_on {
+      color: #c54b3c;
+      border-bottom: 2px #c54b3c solid; }
+
+/*--------------------recommend_main-------------------*/
+.recommend_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #eeebeb;
+  padding: 60px 0 60px 0;
+  overflow: auto;
+  /*----------------recommend_item-------------*/ }
+  .recommend_main .recommend_content {
+    width: 200%;
+    height: 100%; }
+  .recommend_main .tab_list {
+    width: 50%;
+    float: left; }
+  .recommend_main .recommend_item {
+    width: 100%;
+    background: #fff;
+    margin-top: 10px;
+    /*-----------recommend_item_nav_con-----------*/ }
+    .recommend_main .recommend_item .recommend_item_head {
+      width: 100%;
+      height: 70px;
+      padding: 0 10px 0 70px;
+      line-height: 70px;
+      color: #8e8e8e;
+      position: relative; }
+      .recommend_main .recommend_item .recommend_item_head .recommend_item_head_pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: 10px;
+        top: 10px; }
+        .recommend_main .recommend_item .recommend_item_head .recommend_item_head_pic img {
+          width: 100%;
+          height: 100%; }
+      .recommend_main .recommend_item .recommend_item_head .guanzhu {
+        width: 70px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        border: 1px #c54b3c solid;
+        color: #c54b3c;
+        border-radius: 5px; }
+    .recommend_main .recommend_item .recommned_item_pic {
+      width: 100%;
+      height: 340px;
+      padding: 0 10px; }
+      .recommend_main .recommend_item .recommned_item_pic i {
+        float: left;
+        width: 100%;
+        height: 340px; }
+        .recommend_main .recommend_item .recommned_item_pic i img {
+          width: 100%;
+          height: 100%; }
+    .recommend_main .recommend_item h3 {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      line-height: 40px; }
+    .recommend_main .recommend_item .recommend_item_con {
+      width: 100%;
+      padding: 0 10px;
+      padding: 0 10px;
+      line-height: 26px; }
+    .recommend_main .recommend_item .recommend_item_list {
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 10px; }
+      .recommend_main .recommend_item .recommend_item_list span {
+        float: left;
+        background: #eeebeb;
+        padding: 5px 8px;
+        border-radius: 3px;
+        margin: 5px 3px;
+        color: #afafaf; }
+    .recommend_main .recommend_item .clear {
+      clear: both; }
+    .recommend_main .recommend_item .recommend_item_nav {
+      width: 100%;
+      height: 40px;
+      margin-top: 20px;
+      border-top: 1px #eeebeb solid;
+      border-bottom: 1px #eeebeb solid; }
+      .recommend_main .recommend_item .recommend_item_nav .recommend_item_nav_list {
+        width: 30%;
+        height: 40px;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        border-right: 1px #eeebeb solid;
+        font-size: 15px; }
+      .recommend_main .recommend_item .recommend_item_nav .recommend_item_nav_list:nth-child(1) {
+        width: 40%;
+        background: #aaaaaa;
+        color: #fff;
+        position: relative; }
+        .recommend_main .recommend_item .recommend_item_nav .recommend_item_nav_list:nth-child(1):after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border: 1px transparent solid;
+          border-left-color: #fff;
+          border-bottom-color: #fff;
+          -webkit-transform: rotate(-45deg);
+          position: absolute;
+          left: 50%;
+          margin-left: 48px;
+          top: 13px; }
+        .recommend_main .recommend_item .recommend_item_nav .recommend_item_nav_list:nth-child(1).recommend_item_nav_on {
+          width: 40%;
+          background: #aaaaaa;
+          color: #fff;
+          position: relative; }
+          .recommend_main .recommend_item .recommend_item_nav .recommend_item_nav_list:nth-child(1).recommend_item_nav_on:after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border: 1px transparent solid;
+            border-left-color: #fff;
+            border-bottom-color: #fff;
+            -webkit-transform: rotate(135deg);
+            position: absolute;
+            left: 50%;
+            margin-left: 48px;
+            top: 17px; }
+    .recommend_main .recommend_item .recommend_item_nav_con {
+      width: 100%;
+      display: none; }
+      .recommend_main .recommend_item .recommend_item_nav_con .recommend_item_nav_title {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+        color: #aaa;
+        border-bottom: 1px #eeebeb solid; }
+      .recommend_main .recommend_item .recommend_item_nav_con li {
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px #eeebeb solid;
+        line-height: 40px; }
+        .recommend_main .recommend_item .recommend_item_nav_con li .recommend_item_nav_key {
+          width: 60%;
+          height: 40px;
+          position: relative;
+          padding-left: 35px;
+          float: left; }
+          .recommend_main .recommend_item .recommend_item_nav_con li .recommend_item_nav_key .recommend_item_nav_right {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #aaaaaa;
+            color: #fff;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            text-align: center;
+            line-height: 20px; }
+        .recommend_main .recommend_item .recommend_item_nav_con li .recommend_item_nav_weight {
+          width: 40%;
+          height: 40px;
+          float: right;
+          position: relative; }
+          .recommend_main .recommend_item .recommend_item_nav_con li .recommend_item_nav_weight .recommend_item_nav_car {
+            height: 40px;
+            line-height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 0; }
+
+/*-----------------recommend_footer--------------*/
+.recommend_footer {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  font-size: 26px; }
+
+/*---------------------------------all_container----------------------*/
+.all_container {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform: translate3d(100%, 0, 0); }
+
+/*# sourceMappingURL=index.css.map */

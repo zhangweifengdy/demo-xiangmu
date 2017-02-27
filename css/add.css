@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/*全局*/
+/*html,body*/
+/*定位*/
+/*公共头部*/
+/*关注按钮*/
+/*内部盒子*/
+/*中间盒子定位*/
+/*图片轮播下标*/
+/*三角*/
+/*普通的底部*/
+/*底部*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  font-family: "Microsoft YaHei"; }
+
+html, body, .add_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+li {
+  list-style: none; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+/*------------------add_header------------------------*/
+.add_header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  position: relative; }
+  .add_header .add_back {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -7px;
+    width: 15px;
+    height: 15px;
+    border: 2px transparent solid;
+    border-bottom-color: #6b6d76;
+    border-left-color: #6b6d76;
+    -webkit-transform: rotate(45deg); }
+  .add_header h1 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    padding: 0 40px;
+    font-weight: normal;
+    font-size: 20px; }
+  .add_header .add_next {
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 15px;
+    color: #bababa; }
+  .add_header .add_next_on {
+    color: #c54b3c; }
+
+/*-----------------------add_main------------------------*/
+.add_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  padding: 60px 0 60px 0;
+  overflow: auto; }
+  .add_main .add_content {
+    padding: 0 10px; }
+    .add_main .add_content .add_file_alt {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 20px;
+      font-size: 15px;
+      color: #b2b2b2; }
+    .add_main .add_content .input {
+      width: 100%;
+      height: 35px;
+      margin-top: 5px; }
+      .add_main .add_content .input input {
+        width: 100%;
+        height: 35px;
+        outline: none;
+        border: 1px #eeebeb solid;
+        border-radius: 5px;
+        padding-left: 5px; }
+    .add_main .add_content .add_floor {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      color: #c54b3c;
+      margin-top: 50px; }
+
+/*------------------------add_footer------------------------*/
+.add_footer {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-top: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  line-height: 60px;
+  color: #c54b3c; }
+
+/*# sourceMappingURL=add.css.map */

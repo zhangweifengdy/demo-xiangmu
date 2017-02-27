@@ -1,0 +1,86 @@
+@import "public.scss";
+@charset "UFT-8";
+*{
+	@include all;
+	font-family:"Microsoft YaHei";
+}
+html,body,.set_container{
+	@include full;
+}
+li{
+	list-style:none;
+}
+img{
+	width:100%;
+	height:100%;
+}
+/*-----------------set_header---------------*/
+.set_header{
+	@include com_head;
+	@include pos(relative);
+	.set_back{
+		@include pos;
+		left:10px;
+		top:50%;
+		margin-top:-7px;
+		@include area;
+	}
+	h1{
+		width:100%;
+		height:60px;
+		line-height:60px;
+		text-align:center;
+		font-size:20px;
+		font-weight:normal;
+	}
+}
+/*----------------------set_main---------------*/
+.set_main{
+	@include com_mid(60px,0,0,0,#eeebeb);
+	.set_item{
+		width:100%;
+		margin-top:10px;
+		background:#fff;
+		padding:0 10px;
+		.set_list{
+			width:100%;
+			height:50px;
+			border-bottom:1px solid #eeebeb;
+			display:-webkit-flex;
+			.set_con{
+				-webkit-flex-grow:1;
+				line-height:50px;
+			}
+			.set_btn{
+				width:60px;
+				height:50px;
+				span{
+					width:100%;
+					height:30px;
+					background:#4dd865;
+					border-radius:15px;
+					display:inline-block;
+					@include pos(relative);
+					margin-top:10px;
+					i{
+						@include pos;
+						right:5px;
+						top:5px;
+						width:20px;
+						height:20px;
+						border-radius:50%;
+						background:#fff;
+					}
+				}
+			}
+			.set_btn_on{
+				span{
+					background:#ccc;
+				}
+				i{
+					left:5px;
+				}
+			}
+		}
+	}
+}

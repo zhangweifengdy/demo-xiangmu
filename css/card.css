@@ -1,0 +1,121 @@
+@charset "UTF-8";
+/*全局*/
+/*html,body*/
+/*定位*/
+/*公共头部*/
+/*关注按钮*/
+/*内部盒子*/
+/*中间盒子定位*/
+/*图片轮播下标*/
+/*三角*/
+/*普通的底部*/
+/*底部*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  font-family: "Microsoft YaHei"; }
+
+html, body, .card_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+li {
+  list-style: none; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+/*-----------------card_container-------------------*/
+.card_header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  position: relative; }
+  .card_header .card_back {
+    width: 32px;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    left: 10px;
+    top: 0; }
+  .card_header h1 {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding: 0 50px;
+    font-size: 20px;
+    font-weight: normal; }
+  .card_header .card_send {
+    width: 32px;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #989898; }
+
+/*--------------------card_main-------------------------*/
+.card_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #eeebeb;
+  padding: 60px 0 0 0;
+  overflow: auto; }
+  .card_main .card_item {
+    width: 100%;
+    background: #fff;
+    padding: 0 10px; }
+    .card_main .card_item .card_title {
+      width: 100%;
+      height: 40px;
+      border-bottom: 1px #eeebeb solid; }
+      .card_main .card_item .card_title input {
+        width: 100%;
+        height: 38px;
+        border: none;
+        outline: none; }
+    .card_main .card_item .card_con {
+      width: 100%;
+      height: 100px;
+      background: yellow; }
+      .card_main .card_item .card_con #card_text {
+        width: 100%;
+        height: 100px;
+        border: none;
+        outline: none;
+        line-height: 25px; }
+    .card_main .card_item .card_add {
+      width: 100%;
+      margin-top: 20px; }
+      .card_main .card_item .card_add .card_add_pic {
+        width: 100px;
+        height: 100px;
+        border: 2px dashed #aaaaaa;
+        text-align: center;
+        line-height: 100px;
+        font-size: 50px;
+        color: #aaaaaa; }
+    .card_main .card_item .add_tagname {
+      width: 100%;
+      height: 40px;
+      border-top: 1px #eeebeb solid;
+      border-bottom: 1px #eeebeb solid;
+      margin-top: 10px;
+      line-height: 40px;
+      color: #9c9c9c; }
+      .card_main .card_item .add_tagname i {
+        padding-right: 5px; }
+
+/*# sourceMappingURL=card.css.map */

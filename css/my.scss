@@ -1,0 +1,162 @@
+@import "public.scss";
+@charset "UFT-8";
+*{
+	@include all;
+	font-family:"Microsoft YaHei";
+}
+html,body,.my_container{
+	@include full;
+}
+li{
+	list-style:none;
+}
+img{
+	width:100%;
+	height:100%;
+}
+/*----------------------------my_header--------------------*/
+.my_header{
+	@include com_head(260px);
+	background:url(../images/my_bg1_02.jpg);
+	background-size:100% 100%;
+	@include pos(relative);
+	.my_msg{
+		@include pos;
+		left:10px;
+		top:15px;
+		font-size:20px;
+	}
+	.my_more{
+		@include pos;
+		right:10px;
+		top:15px;
+	}
+	.my_pic{
+		width:70px;
+		height:70px;
+		@include pos;
+		top:50px;
+		left:50%;
+		margin-left:-35px;
+		border-radius:50%;
+	}
+	.my_name{
+		width:100%;
+		text-align:center;
+		@include pos;
+		top:130px;
+		left:0;
+		color:#fff;
+	}
+	.my_people{
+		@extend .my_name;
+		top:160px;
+		font-size:15px;
+	}
+	.my_speak{
+		@extend .my_name;
+		top:185px;
+		color:#bab9b9;
+		font-size:15px;
+	}
+}
+/*----------------------------my_main-----------------------*/
+.my_main{
+	@include com_mid(260px,0,60px,0);
+	.my_item{
+		width:100%;
+		height:80px;
+		background:#fff;
+		border-bottom:1px #eeebeb solid;
+		.my_case{
+			width:50%;
+			height:80px;
+			float:left;
+			border-right:1px #eeebeb solid;
+			p{
+				text-align:center;
+				padding-top:10px;
+			}
+			.my_case_title{
+				color:#c9c9c9;
+			}
+			.dengji{
+				color:#c54b3c;
+			}
+		}
+		.my_score{
+			width:50%;
+			height:80px;
+			float:right;
+			p{
+				text-align:center;
+				padding-top:10px;
+			}
+			.my_score_change{
+				color:#9d9d9d;
+				span{
+					@include area(13px,#adadad,-135deg);
+					display:inline-block;
+					margin-left:10px;
+				}
+			}
+		}
+	}
+	.my_tab{
+		width:100%;
+		height:50px;
+		background:#fff;
+		p{
+			width:50%;
+			height:50px;
+			float:left;
+			text-align:center;
+			line-height:50px;
+			span{
+				display:inline-block;
+				padding:0 10px;
+			}
+			.my_tab_on{
+				color:#c54b3c;
+				border-bottom:2px #c54b3c solid;
+			}
+		}
+	}
+	.big{
+		width:100%;
+		overflow:hidden;
+	}
+	.my_tab_content{
+		width:200%;
+		.my_tab_con{
+			width:50%;
+			float:left;
+			.alt{
+				width:100%;
+				height:40px;
+				line-height:40px;
+				text-align:center;
+				color:#c3bfb9;
+			}
+		}
+	}
+}
+/*-------------------------------my_footer----------------------*/
+.my_footer{
+	@include com_footer;
+	li:nth-child(1){
+		i{
+			background:url(../images/community_16.jpg)no-repeat;
+			background-size:100% 100%;
+		}
+	}
+	li:nth-child(4){
+		i{
+			background:url(../images/my_11.jpg)no-repeat;
+			background-size:100% 100%;
+		}
+	}
+	.on{
+		color:#c54b3c;
+	}
+}

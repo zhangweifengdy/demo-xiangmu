@@ -1,0 +1,547 @@
+@import "public.scss";
+@charset "UFT-8";
+*{
+	@include all;
+	font-family:"Microsoft YaHei";
+}
+html,body,.index_container{
+	@include full;
+}
+li{
+	list-style:none;
+}
+@keyframes play{
+	0%{
+		-webkit-transform:translate3d(0,-60px,0);
+		opacity:0;
+	}
+	100%{
+		-webkit-tranform:translate3d(0,0,0);
+		opacity:1;
+	}
+}
+/*-----------------------leader-----------------------*/
+.loading{
+	width:100%;
+	height:100%;
+	background:url(../images/leader.jpg)no-repeat;
+	background-size:100% 100%;
+	@include pos();
+	left:0;
+	top:60px;
+	z-index:20;
+	background:#eeeeee;
+	text-align:center;
+	padding-top:30px;
+	.loading_animation{
+		display:inline-block;
+		animation:play 1s;
+	}
+}
+/*-----------------------index_header------------------*/
+.index_header{
+	@include com_head;
+	@include pos(relative);
+	display:-webkit-flex;
+	padding-top:10px;
+	.recommend{
+		width:48px;
+		height:35px;
+		@include pos(relative);
+		margin:0 8px;
+		i{
+			width:48px;
+			height:35px;
+			display:block;
+			background:url(../images/tuijian_03.jpg)no-repeat;
+			background-size:contain;
+			-webkit-transition:transform .3s;
+		}
+		strong{
+			@include pos;
+			left:50%;
+			top:9px;
+			margin-left:-15px;
+			color:#c54b3c;
+			font-weight:bold;
+		}
+	}
+	.recommend_on{
+		i{
+			-webkit-transform:rotate(160deg) translate3d(10px,0,0);
+			-webkit-transition:transform .5s;
+		}
+	}
+	.index_search{
+		width:100%;
+		height:35px;
+		-webkit-flex-grow:1;
+		background:#f2f2f2;
+		border-radius:5px;
+		font-size:15px;
+		text-align:center;
+		line-height:35px;
+		color:#aaaaaa;
+		i{
+			padding-right:5px;
+		}
+	}
+	.add{
+		width:45px;
+		height:39px;
+		margin:0 10px;
+		text-align:center;
+		line-height:39px;
+		color:#c54b3c;
+		font-weight:bold;
+		font-size:50px;
+	}
+}
+/*---------------------index_main--------------------------*/
+.index_main{
+	@include com_mid;
+/*-------------------------index_banner-------------*/
+	.index_banner{
+		width:100%;
+		height:170px;
+		overflow:hidden;
+		@include pos(relative);
+		ul{
+			width:400%;
+			height:170px;
+			li{
+				width:25%;
+				height:170px;
+				float:left;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+		}
+		.index{
+			@include idx;
+			.index_on{
+				background:#ccc;
+			}
+		}
+	}
+/*------------------------index_nav-------------------*/
+	.index_nav{
+		width:100%;
+		height:100px;
+		background:#fff;
+		li{
+			width:25%;
+			height:80px;
+			float:left;
+			text-align:center;
+			color:#414141;
+			span{
+				display:block;
+				width:32px;
+				height:30px;
+				margin:20px auto 10px auto;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+		}
+	}
+/*------------------index_hotlist----------------*/
+	.index_hotlist{
+		width:100%;
+		height:870px;
+		background:#fff;
+		margin-top:10px;
+		.index_hotlist_title{
+			width:100%;
+			height:35px;
+			line-height:35px;
+			color:#aaaaaa;
+			padding-left:10px;
+		}
+		dl{
+			width:33.3%;
+			height:165px;
+			background:#fff;
+			float:left;
+			padding-left:10px;
+			border-top:1px #eeebeb solid;
+			dt{
+				width:100%;
+				height:106px;
+				margin-top:10px;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+			dd{
+				text-align:center;
+				padding-top:10px;
+				color:#404040;
+			}
+			&:nth-child(3n+1){
+				padding-right:10px;
+			}
+		}
+	}
+/*-------------------index_material-------------*/
+	.index_material{
+		width:100%;
+		margin-top:10px;
+		height:200px;
+		background:#fff;
+		.index_material_title{
+			background:#fff;
+			height:40px;
+			border-bottom:1px #eeebeb solid;
+			line-height:40px;
+			color:#aaaaaa;
+			padding-left:10px;
+		}
+		dl{
+			width:25%;
+			height:110px;
+			border-bottom:1px #eeebeb solid;
+			float:left;
+			dt{
+				width:62px;
+				height:62px;
+				margin:8px auto;
+				img{
+					width:100%;
+					height:100%;
+				}	
+			}
+			dd{
+				text-align:center;
+				color:#404040;
+			}
+		}
+		.all_material{
+			width:100%;
+			height:50px;
+			text-align:center;
+			line-height:50px;
+			color:#c54b3c;
+		}
+	}
+/*---------------index_topic-----------------*/
+	.index_topic{
+		width:100%;
+		margin-top:10px;
+		background:#fff;
+		.index_topic_title{
+			width:100%;
+			height:40px;
+			border-bottom:1px #eeebeb solid;
+			line-height:40px;
+			color:#aaaaaa;
+			padding-left:10px;
+		}
+		.topic_item{
+			width:100%;
+			padding:0 10px;
+			padding-bottom:10px;
+			p{
+				width:100%;
+				height:160px;
+				background:url(../images/topic_03.jpg)no-repeat;
+				background-size:100% 100%;
+				margin-top:10px;
+			}
+			p:nth-child(2){
+				background:url(../images/topic_06.jpg)no-repeat;
+				background-size:100% 100%;
+			}
+			p:nth-child(3){
+				background:url(../images/topic1_03.jpg)no-repeat;
+				background-size:100% 100%;
+			}
+		}
+		.all_topic{
+			width:100%;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			color:#c54b3c;
+			border-top:1px #eeebeb solid;
+		}
+	}
+	.index_bottom{
+		width:100%;
+		height:60px;
+		line-height:60px;
+		text-align:center;
+		color:#ababab;
+	}
+}
+/*------------------------------index_footer---------------------*/
+.index_footer{
+	@include com_footer;
+	.on{
+		color:#c54b3c;
+	}
+}
+/*-------------------------recommend_container-----------------------------*/
+.recommend_container{
+	width:100%;
+	height:100%;
+	background:#fff;
+	overflow:hidden;
+	@include pos(absolute);
+	left:0;
+	top:0;
+	z-index:10;
+	-webkit-transform:translate3d(0,-110%,0);
+}
+/*----------------------------recommend_header----------------*/
+.recommend_header{
+	@include com_head;
+	@include pos(relative);
+	.recommend_two{
+		width:48px;
+		height:35px;
+		@include pos(absolute);
+		left:10px;
+		top:10px;
+		i{
+			width:48px;
+			height:35px;
+			display:block;
+			background:url(../images/tuijian_03.jpg)no-repeat;
+			background-size:contain;
+			-webkit-transform:rotate(160deg) translate3d(10px,0,0);
+		}
+		strong{
+			@include pos;
+			left:50%;
+			top:9px;
+			margin-left:-15px;
+			color:#c54b3c;
+			font-weight:bold;
+		}
+	}
+	.recommend_tab{
+		width:50%;
+		height:60px;
+		margin:0 auto;
+		.recommend_select{
+			width:50%;
+			color:#ababab;
+			float:left;
+			padding:11px;
+		}
+		.recommend_select_on{
+			color:#c54b3c;
+			border-bottom:2px #c54b3c solid;
+		}
+	}
+}
+/*--------------------recommend_main-------------------*/
+.recommend_main{
+	@include com_mid;
+	.recommend_content{
+		width:200%;
+		height:100%;
+	}
+	.tab_list{
+		width:50%;
+		float:left;
+	}
+	/*----------------recommend_item-------------*/
+	.recommend_item{
+		width:100%;
+		background:#fff;
+		margin-top:10px;
+		.recommend_item_head{
+			width:100%;
+			height:70px;
+			padding:0 10px 0 70px;
+			line-height:70px;
+			color:#8e8e8e;
+			@include pos(relative);
+			.recommend_item_head_pic{
+				width:50px;
+				height:50px;
+				border-radius:50%;
+				@include pos;
+				left:10px;
+				top:10px;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+			.guanzhu{
+				@include look;
+			}
+		}
+		.recommned_item_pic{
+			width:100%;
+			height:340px;
+			padding:0 10px;
+			i{
+				float:left;
+				width:100%;
+				height:340px;
+				img{
+					width:100%;
+					height:100%;
+				}
+			}
+		}
+		h3{
+			width:100%;
+			height:40px;
+			padding:0 10px;
+			line-height:40px;
+		}
+		.recommend_item_con{
+			width:100%;
+			padding:0 10px;
+			padding:0 10px;
+			line-height:26px;
+		}
+		.recommend_item_list{
+			width:100%;
+			margin-top:5px;
+			padding-bottom:10px;
+			span{
+				float:left;
+				background:#eeebeb;
+				padding:5px 8px;
+				border-radius:3px;
+				margin:5px 3px;
+				color:#afafaf;
+			}
+		}
+		.clear{
+			clear:both;
+		}
+		.recommend_item_nav{
+			width:100%;
+			height:40px;
+			margin-top:20px;
+			border-top:1px #eeebeb solid;
+			border-bottom:1px #eeebeb solid;
+			.recommend_item_nav_list{
+				width:30%;
+				height:40px;
+				float:left;
+				text-align:center;
+				line-height:40px;
+				border-right:1px #eeebeb solid;
+				font-size:15px;
+			}
+			.recommend_item_nav_list:nth-child(1){
+				width:40%;
+				background:#aaaaaa;
+				color:#fff;
+				@include pos(relative);
+				&:after{
+					content:"";
+					width:10px;
+					height:10px;
+					border:1px transparent solid;
+					border-left-color:#fff;
+					border-bottom-color:#fff;
+					-webkit-transform:rotate(-45deg);
+					@include pos;
+					left:50%;
+					margin-left:48px;
+					top:13px;
+				}
+				&.recommend_item_nav_on{
+				width:40%;
+				background:#aaaaaa;
+				color:#fff;
+				@include pos(relative);
+				&:after{
+					content:"";
+					width:10px;
+					height:10px;
+					border:1px transparent solid;
+					border-left-color:#fff;
+					border-bottom-color:#fff;
+					-webkit-transform:rotate(135deg);
+					@include pos;
+					left:50%;
+					margin-left:48px;
+					top:17px;
+				}
+			}
+			}
+		}
+	/*-----------recommend_item_nav_con-----------*/
+		.recommend_item_nav_con{
+			width:100%;
+			display:none;
+			.recommend_item_nav_title{
+				width:100%;
+				height:40px;
+				line-height:40px;
+				padding-left:10px;
+				color:#aaa;
+				border-bottom:1px #eeebeb solid;
+			}
+			li{
+				width:100%;
+				height:40px;
+				border-bottom:1px #eeebeb solid;
+				line-height:40px;
+				.recommend_item_nav_key{
+					width:60%;
+					height:40px;
+					@include pos(relative);
+					padding-left:35px;
+					float:left;
+					.recommend_item_nav_right{
+						width:20px;
+						height:20px;
+						border-radius:50%;
+						background:#aaaaaa;
+						color:#fff;
+						@include pos;
+						left:10px;
+						top:10px;
+						text-align:center;
+						line-height:20px;
+					}
+				}
+				.recommend_item_nav_weight{
+					width:40%;
+					height:40px;
+					float:right;
+					@include pos(relative);
+					.recommend_item_nav_car{
+						height:40px;
+						line-height:40px;
+						@include pos;
+						right:10px;
+						top:0;
+					}
+				}
+			}
+		}
+	}
+}
+/*-----------------recommend_footer--------------*/
+.recommend_footer{
+	width:100%;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	@include pos(fixed);
+	left:0;
+	bottom:0;
+	background:#fff;
+	font-size:26px;
+}
+/*---------------------------------all_container----------------------*/
+.all_container{
+	@include nb_box;
+}

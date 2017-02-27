@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/*全局*/
+/*html,body*/
+/*定位*/
+/*公共头部*/
+/*关注按钮*/
+/*内部盒子*/
+/*中间盒子定位*/
+/*图片轮播下标*/
+/*三角*/
+/*普通的底部*/
+/*底部*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  font-family: "Microsoft YaHei"; }
+
+html, body, .message_container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+li {
+  list-style: none; }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+/*------------------------message_header----------------*/
+.message_header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px #eeebeb solid;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  position: relative; }
+  .message_header .message_back {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -7px;
+    width: 15px;
+    height: 15px;
+    border: 2px transparent solid;
+    border-bottom-color: #6b6d76;
+    border-left-color: #6b6d76;
+    -webkit-transform: rotate(45deg); }
+  .message_header h1 {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal; }
+  .message_header .message_set {
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #c54b3c; }
+
+/*--------------------------message_main-----------------------*/
+.message_main {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #eeebeb;
+  padding: 60px 0 0 0;
+  overflow: auto; }
+  .message_main .message_item {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    background: #fff;
+    display: -webkit-flex;
+    padding-top: 10px; }
+    .message_main .message_item .message_pic {
+      width: 60px;
+      height: 60px;
+      margin: 0 5px; }
+    .message_main .message_item .message_con {
+      -webkit-flex-grow: 1; }
+      .message_main .message_item .message_con span {
+        display: block;
+        padding: 5px 0; }
+      .message_main .message_item .message_con small {
+        color: #aaaaaa; }
+    .message_main .message_item .message_time {
+      padding-right: 5px;
+      font-size: 14px;
+      color: #aaaaaa; }
+
+/*# sourceMappingURL=message.css.map */

@@ -1,0 +1,132 @@
+@import "public.scss";
+@charset "UFT-8";
+*{
+	@include all;
+	font-family:"Microsoft YaHei";
+}
+html,body,.search_container{
+	@include full;
+}
+li{
+	list-style:none;
+}
+img{
+	width:100%;
+	height:100%;
+}
+/*------------------------search_header----------------------*/
+.search_header{
+	@include com_head;
+	.search_back{
+		@include pos;
+		left:10px;
+		top:50%;
+		margin-top:-7px;
+		@include area;
+		z-index:10;
+	}
+	p{
+		width:100%;
+		height:60px;
+		padding:13px 20px 0 40px;
+		@include pos(relative);
+		input{
+			width:100%;
+			height:35px;
+			background:#efefef;
+			border-radius:5px;
+			border:none;
+			outline:none;
+			padding-left:25px;
+		}
+		i{
+			@include pos;
+			left:45px;
+			top:23px;
+			color:#afafaf;
+		}
+	}
+}
+/*----------------------------search_main-----------------------*/
+.search_main{
+	@include com_mid(60px,0,0,0,#fff);
+	.search_nav{
+		width:100%;
+		height:50px;
+		background:#fff;
+		li{
+			width:33.3%;
+			height:50px;
+			float:left;
+			text-align:center;
+			line-height:50px;
+			color:#aaaaaa;
+			span{
+				padding:0 15px;
+			}
+			.search_nav_on{
+				height:50px;
+				display:inline-block;
+				border-bottom:2px #c54b3c solid;
+				color:#000;
+			}
+		}
+	}
+	.search_box{
+		width:100%;
+		overflow:hidden;
+	}
+	.search_content{
+		width:300%;
+		.search_list{
+			width:33.3%;
+			float:left;
+			.search_list_title{
+				width:100%;
+				height:40px;
+				line-height:40px;
+				color:#aaaaaa;
+				background:#eeebeb;
+				padding-left:10px;
+			}
+			.search_list_val{
+				width:100%;
+				height:100%;
+				padding:0 10px;
+				span{
+					display:inline-block;
+					color:#aaaaaa;
+					background:#eeebeb;
+					padding:3px 8px;
+					border-radius:5px;
+					margin:5px;
+					font-size:14px;
+				}
+				li{
+					width:20%;
+					height:80px;
+					float:left;
+					font-size:14px;
+					padding:0 3px;
+					i{
+						width:50px;
+						height:50px;
+						border-radius:50%;
+						display:block;
+						margin:3px auto 5px auto;
+					}
+					small{
+						width:100%;
+						height:20px;
+						font-size:14px;
+						text-align:center;
+						display:block;
+						white-space:nowrap;
+						overflow:hidden;
+						text-overflow:ellipsis;
+					}
+				}
+			}
+		}
+	}
+}

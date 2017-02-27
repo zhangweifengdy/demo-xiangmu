@@ -1,0 +1,19 @@
+$(function(){
+	//点击返回上一页
+	$(".add_back").on("click",function(){
+		window.location.href="index1.html";
+	})
+	//判断是否输入配方
+	$(".input").on("keyup","input",function(){
+		var len=$(this).val();
+		$(".add_next").addClass("add_next_on")
+		if(len==0){
+			$(".add_next").removeClass("add_next_on")
+		}
+		if(len!=0){
+			$(".add_next").on("click",function(){
+				window.location.href="formula.html?val="+len;
+			})
+		}
+	})
+})

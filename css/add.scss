@@ -1,0 +1,91 @@
+@import "public.scss";
+@charset "UFT-8";
+*{
+	@include all;
+	font-family:"Microsoft YaHei";
+}
+html,body,.add_container{
+	@include full;
+}
+li{
+	list-style:none;
+}
+img{
+	width:100%;
+	height:100%;
+}
+/*------------------add_header------------------------*/
+.add_header{
+	@include com_head;
+	@include pos(relative);
+	.add_back{
+		@include pos;
+		left:10px;
+		top:50%;
+		margin-top:-7px;
+		@include area;
+	}
+	h1{
+		width:100%;
+		height:60px;
+		text-align:center;
+		line-height:60px;
+		padding:0 40px;
+		font-weight:normal;
+		font-size:20px;
+	}
+	.add_next{
+		height:60px;
+		line-height:60px;
+		@include pos;
+		right:10px;
+		top:0;
+		font-size:15px;
+		color:#bababa;
+	}
+	.add_next_on{
+		color:#c54b3c;
+	}
+}
+/*-----------------------add_main------------------------*/
+.add_main{
+	@include com_mid(60px,0,60px,0,#fff);
+	.add_content{
+		padding:0 10px;
+		.add_file_alt{
+			width:100%;
+			height:40px;
+			line-height:40px;
+			margin-top:20px;
+			font-size:15px;
+			color:#b2b2b2;
+		}
+		.input{
+			width:100%;
+			height:35px;
+			margin-top:5px;
+			input{
+				width:100%;
+				height:35px;
+				outline:none;
+				border:1px #eeebeb solid;
+				border-radius:5px;
+				padding-left:5px;
+			}
+		}
+		.add_floor{
+			width:100%;
+			height:40px;
+			line-height:40px;
+			color:#c54b3c;
+			margin-top:50px;
+		}
+	}
+}
+/*------------------------add_footer------------------------*/
+.add_footer{
+	@include pub_footer;
+	text-align:center;
+	line-height:60px;
+	color:#c54b3c;
+}
